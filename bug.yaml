@@ -1,0 +1,18 @@
+---
+- hosts: all #We have sperate inventory files for each server/environment
+  vars:
+    foo_play: bar_play
+  tasks:
+    - name: Include Role
+      include_role: 
+        name: buggy.role
+
+    - name: Example 1
+      template:
+        src: "noscope.txt"
+        dest: "~/noscope.txt"
+
+    - name: Example 2
+      template:
+        src: "scope.txt"
+        dest: "~/scope.txt"
