@@ -1,3 +1,7 @@
 ---
 - name: Include Vars
   include_vars: included.yaml
+
+
+- name: Show Variable
+  debug: { msg: "Role Variable is {{foo_role_included}}" }
